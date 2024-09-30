@@ -18,11 +18,11 @@
 <hr>
 
 <p align="center">
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Icarus1989/GreenLikeNature?style=flat-square">
-<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Icarus1989/GreenLikeNature"> 
-<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Icarus1989/GreenLikeNature">
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Icarus1989/GreenLikeNature">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Icarus1989/GreenLikeNature">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Icarus1989/typescript-travel-project?style=flat-square">
+<img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Icarus1989/typescript-travel-project"> 
+<img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Icarus1989/typescript-travel-project">
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Icarus1989/typescript-travel-project">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Icarus1989/typescript-travel-project">
 </p>
 
 <hr>
