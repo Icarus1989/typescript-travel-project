@@ -5,13 +5,13 @@
 <h1><i>TypeScript Moove Project</i></h1>
 </div>
 
-**Questa é una Web App creata come progetto per il completamento del Corso _TypeScript_ di _Start2Impact_**.
+**Questa é un progetto creato per il completamento del Corso _TypeScript_ di _Start2Impact_**.
 
 ## Progetto:
 
 <div align="center">
   <h2>TypeScript / Travel</h2>
-	<code><img width="100" src="https://user-images.githubusercontent.com/25181517/183897015-94a058a6-b86e-4e42-a37f-bf92061753e5.png" alt="React" title="React"/></code>
+	<a title="™/®Microsoft, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg"><img width="128" alt="Typescript logo 2020" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/256px-Typescript_logo_2020.svg.png?20221110153201"></a>
 </div>
 
 <hr>
@@ -23,7 +23,6 @@
 <img alt="GitHub code size in bytes" src="https://img.shields.io/github/languages/code-size/Icarus1989/GreenLikeNature">
 <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/Icarus1989/GreenLikeNature">
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/Icarus1989/GreenLikeNature">
-<a title="™/®Microsoft, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg"><img width="256" alt="Typescript logo 2020" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/256px-Typescript_logo_2020.svg.png?20221110153201"></a>
 </p>
 
 <hr>
