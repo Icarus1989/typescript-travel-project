@@ -11,6 +11,7 @@
 
 <div align="center">
   <h2>TypeScript / Travel</h2>
+	<br>
 	<a title="™/®Microsoft, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Typescript_logo_2020.svg"><img width="128" alt="Typescript logo 2020" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/256px-Typescript_logo_2020.svg.png?20221110153201"></a>
 </div>
 
@@ -65,13 +66,9 @@ Progetto sviluppato utilizzando le conoscenze in questi linguaggi:
 <hr>
 <hr>
 
-## Description
+### Description
 
-<div align="center">
-  <img src="https://i.ibb.co/MVXWhkc/Untitled-1.png" alt="image-For-Presentation" width="90%" height="90%">
-</div>
-
-### Moove Project
+#### Moove Project
 
 Questo progetto é stato creato per consolidare le conoscenze acquisite durante il Corso **TypeScript** di Start2Impact, parte finale del mio percorso come Front-End Developer. Questo é molto meno articolato e sviluppato dei precedenti, ma dimostra comunque egregiamente l'utilità di TypeScript, rendendo necessaria la comprensione della tipizzazione delle entità presenti per poterlo realizzare.
 
@@ -91,27 +88,27 @@ Il progetto richiede solo la scrittura del codice in TypeScript.
 
 L'azienda che vedi è ipotetica e per realizzare il progetto potrai immaginare di essere un membro del suo team.
 
-Nome
+**Nome**
 
 Moove
 
-Da dove nasce l'idea
+**Da dove nasce l'idea**
 
 La fondatrice nasce in una grande città dove per spostarsi senza macchina si alternano diversi mezzi differenti: tram, metro, bus. Ha sempre sognato di poter far materializzare la sua bici in giro per la città nei tratti a piedi o quando non voleva aspettare il tram. Con questa idea, ha creato Moove.
 
-Vision
+**Vision**
 
 Integrare nella vita quotidiana una mobilità sostenibile, condivisa e alla portata di tutti.
 
-Mission
+**Mission**
 
 Fornire soluzioni di micromobilità che siano flessibili, convenienti e rispettose dell'ambiente.
 
-Chi siamo
+**Chi siamo**
 
 Moove è un’azienda leader nella micro mobilità condivisa. I loro mezzi sono disponibili in 20 città europee. I mezzi messi a disposizione sono bici, scooter e monopattini, tutti elettrici.
 
-Come funziona?
+**Come funziona?**
 
 I mezzi sono liberamente parcheggiati in città e sono a disposizione di cittadini e turisti. Per utilizzare un mezzo è necessario scaricare l’app, attivare la geolocalizzazione e prenotare il mezzo desiderato più vicino. Si può scegliere tra tariffa oraria, giornaliera o abbonamento mensile.
 
@@ -166,6 +163,9 @@ Segui questi passaggi:
 - Crea un'istanza della classe Citta per una o più città in cui Moove opera, aggiungendo i mezzi istanziati all'elenco dei mezzi disponibili.
 - Testa la logica di prenotazione dei mezzi da parte degli utenti e l'aggiunta di nuovi mezzi alle città.
 
+<hr>
+<hr>
+
 ## Additional Features
 
 Con l'obiettivo di mettere in pratica qualcosa in più di quanto appreso nella teoria e ripassare quanto imparato negli altri corsi, ho voluto aggiungere qualche estensione alle funzionalità necessarie per il progetto, comunque contestualizzate correttamente e limitate:
@@ -182,9 +182,12 @@ Questi rappresenteranno gli stati nei quali potrà trovarsi un mezzo ed indicher
     citta: ICitta | "none";
   };
 </code>
+<br>
 
 Questa modifica é funzionale al fatto che quando si andrà ad aggiungere un mezzo ad una nuova città tramite il metodo **aggiungiMezzo()** della class Citta occorrerà toglierlo dalla precedente per non avere duplicati e problemi successivamente, per esempio rappresentando in React.js tali liste di mezzi e ottenendo un errore per i duplicati non filtrati.
 Una reference alla città precedente rende possibile e rapido questo processo.
+
+<hr>
 
 - **interface IUtente**
 
@@ -197,8 +200,11 @@ La property **metodoDiPagamento** accetterà value di type **Fatturazione**. Que
     credito: number;
   };
 </code>
+<br>
 
 Questo chiaramente condizionerà la capacità o meno di prenotazione di un mezzo da parte dell'utente.
+
+<hr>
 
 - **class Utente**
 
@@ -241,6 +247,9 @@ I primi due rappresentano la continuità: un utente può prenotare un mezzo e ri
 		}
 	}
 </code>
+<br>
+
+<hr>
 
 - **class Città**
 
@@ -255,6 +264,7 @@ Nella class Citta vi sarà una modifica fin dal constructor:
 		});
 	}
 </code>
+<br>
 
 I mezzi della flotta di una determinata città potranno essere aggiunti al momento dell'instanziazione della class. Il parametro flotta è un rest parameter perciò un qualsisi numero di mezzi verrà gestito. Questi verranno modificati singolarmente per avere un'indicazione della flotta di appartenza.
 
@@ -279,12 +289,18 @@ Questo controllerà prima se il mezzo é già presente nella flotta, in modo da 
 		this.flotta.push(mezzo);
 	}
 </code>
+<br>
+
+<hr>
+<hr>
 
 ## Resources
 
 - [Documentazione](https://www.typescriptlang.org/)
 - [typescripttutorial.net](https://www.typescripttutorial.net/typescript-tutorial/typescript-type-guards/#)
--
+
+<hr>
+<hr>
 
 ## Demo
 
