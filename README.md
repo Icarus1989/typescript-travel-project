@@ -38,8 +38,8 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#build-with">Built With</a></li>
-        <li><a href="#install">Built With</a></li>
-        <li><a href="#codepen">Built With</a></li>
+        <li><a href="#install">Install</a></li>
+        <li><a href="#codepen">Codepen</a></li>
         <li><a href="#description">Description</a>
           <ul>
           <li><a href="#moove-project">Moove Project</a></li>
@@ -64,8 +64,6 @@
 ## About the project
 
 ### Build with:
-
-Progetto sviluppato utilizzando le conoscenze in questi linguaggi:
 
 - _TypeScript_
 - _JavaScript_
@@ -112,7 +110,7 @@ In alternativa si può utilizzare il progetto senza necessità di clonarlo trami
 [TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE?editors=1111)
 
 > [!IMPORTANT]
-> Utilizzare TypeScript nelle impostazioni di codepen.io per compilare corretttamente il progetto.
+> Utilizzare TypeScript nelle impostazioni di codepen.io per compilare correttamente il progetto.
 
 ### Description
 
@@ -312,7 +310,7 @@ I primi due rappresentano la continuità: un utente può prenotare un mezzo e ri
 
 Nella class Citta vi sarà una modifica fin dal constructor:
 
-<code>
+```typescript
   constructor(nome: string, ...flotta: IMezzo[]) {
 		this.nome = nome;
 		this.flotta = flotta.map((mezzo) => {
@@ -320,7 +318,8 @@ Nella class Citta vi sarà una modifica fin dal constructor:
 			return mezzo;
 		});
 	}
-</code>
+```
+
 <br>
 
 I mezzi della flotta di una determinata città potranno essere aggiunti al momento dell'instanziazione della class. Il parametro flotta è un rest parameter perciò un qualsisi numero di mezzi verrà gestito. Questi verranno modificati singolarmente per avere un'indicazione della flotta di appartenza.
