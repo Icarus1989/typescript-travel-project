@@ -125,6 +125,29 @@ Questo progetto é stato creato per consolidare le conoscenze acquisite durante 
 
 Di utilizzo molto basilare, basta creare delle istanze delle varie classi e utilizzarne i metodi per vedere i log nella console.
 
+Si creino delle istanze per i mezzi (bici, scooter o monopattino), per le città e per gli utenti.
+
+Per esempio:
+
+```typescript
+const bike001 = new Mezzo("bici", "001", {
+	status: "disponibile",
+	utente: "none",
+	citta: "none"
+});
+
+const johnAccount = new Utente("John", "Doe", "johndoe@abc.com", {
+	status: "attivo",
+	modalita: "ApplePay",
+	credito: 1000
+});
+
+const mooveAmsterdam = new Citta("Amsterdam", bike001, bike002);
+```
+
+Si potranno associare i mezzi alle città al momento della creazione dell'istanza della città oppure tramite il metodo aggiungiMezzo(mezzo) in seguito.
+Si potranno prenotare dei mezzi tramite il metodo prenotaMezzo(mezzo) di qualsiasi istanza Utente. Se, una volta prenotato il mezzo, si richiamerà lo stesso metodo con lo stesso parametro, il mezzo verrà depositato e tornerà disponibile.
+
 <hr>
 <hr>
 
