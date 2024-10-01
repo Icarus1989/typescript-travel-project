@@ -6,7 +6,7 @@ type Disponibile = {
 
 type InUso = {
 	status: "inUso";
-	utente: Utente;
+	utente: IUtente;
 	citta: ICitta | "none";
 };
 

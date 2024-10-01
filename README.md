@@ -105,7 +105,7 @@ tsc app.ts --watch
 
 ### Codepen
 
-In alternativa si può utilizzare il progetto senza necessità di clonarlo tramite pen del sito codeper.io:
+In alternativa si può utilizzare il progetto senza necessità di clonarlo tramite pen del sito codepen.io:
 
 [TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE?editors=1111)
 
@@ -116,7 +116,7 @@ In alternativa si può utilizzare il progetto senza necessità di clonarlo trami
 
 #### Moove Project
 
-Questo progetto é stato creato per consolidare le conoscenze acquisite durante il Corso **TypeScript** di Start2Impact, parte finale del mio percorso come Front-End Developer. Questo é molto meno articolato e sviluppato dei precedenti, ma dimostra comunque egregiamente l'utilità di TypeScript, rendendo necessaria la comprensione della tipizzazione delle entità presenti per poterlo realizzare.
+Questo progetto é stato creato per consolidare le conoscenze acquisite durante il Corso **TypeScript** di Start2Impact, parte del mio percorso come Front-End Developer. Questo é molto meno articolato e sviluppato dei precedenti, ma dimostra comunque egregiamente l'utilità di TypeScript, rendendo necessaria la comprensione della tipizzazione delle entità presenti per poterlo realizzare.
 
 <hr>
 <hr>
@@ -243,17 +243,23 @@ Segui questi passaggi:
 
 ## Additional Features
 
-Con l'obiettivo di mettere in pratica qualcosa in più di quanto appreso nella teoria e ripassare quanto imparato negli altri corsi, ho voluto aggiungere qualche estensione alle funzionalità necessarie per il progetto, comunque contestualizzate correttamente e limitate:
+Come negli altri progetti di questo corso, ho voluto aggiungere qualche estensione alle funzionalità richieste per il progetto, comunque contestualizzate correttamente e limitate:
 
 - **interface IMezzo**
 
-La property stato accetterà, invece che delle value string, dei types creati appositamente: Disponibile (pronto per l'uso), InUso (mezzo assegnato ad un Utente) e NonDisponibile (nel caso il mezzo sia in riparazione o altro).
-Questi rappresenteranno gli stati nei quali potrà trovarsi un mezzo ed indicherà anche l'utente al quale il mezzo é stato assegnato come richiesto e in aggiunta la città dove il mezzo é disponibile. La property accetterà un type ICitta o "none" al momento della creazione:
+La proprietà **stato** accetterà, invece che delle value string, dei types creati appositamente: **Disponibile** (pronto per l'uso), **InUso** (mezzo assegnato ad un Utente) e **NonDisponibile** (nel caso il mezzo sia in riparazione o altro).
+Questi rappresenteranno gli stati nei quali potrà trovarsi un mezzo ed indicherà anche l'utente al quale il mezzo é stato assegnato come richiesto e in aggiunta la città dove il mezzo é disponibile. La proprietà aggiunta utente, in base al type utilizzato, potrà accetterà il type IUtente o "none", mentre la proprietà aggiunta **citta** accetterà un type ICitta o "none" al momento della creazione:
 
 ```typescript
 type Disponibile = {
 	status: "disponibile";
 	utente: "none";
+	citta: ICitta | "none";
+};
+
+type InUso = {
+	status: "inUso";
+	utente: IUtente;
 	citta: ICitta | "none";
 };
 ```
@@ -267,7 +273,7 @@ Una reference alla città precedente rende possibile e rapido questo processo.
 
 - **interface IUtente**
 
-La property **metodoDiPagamento** accetterà value di type **Fatturazione**. Questo type indicherà se l'account é attivo o non attivo, quale metodo di pagamento sia stato selezionato al momento della crezione dell'istanza ed il credito disponibile.
+La property **metodoDiPagamento** accetterà value di type **Fatturazione**. Questo type indicherà se l'account é attivo o non attivo, quale metodo di pagamento sia stato selezionato al momento della crezione dell'istanza ed una semplificazione per il credito disponibile.
 
 ```typescript
 type Fatturazione = {
@@ -279,14 +285,14 @@ type Fatturazione = {
 
 <br>
 
-Questo chiaramente condizionerà la capacità o meno di prenotazione di un mezzo da parte dell'utente.
+Questo chiaramente condizionerà la capacità o meno di prenotare un mezzo da parte dell'utente.
 
 <hr>
 
 - **class Utente**
 
 Il metodo **prenotaMezzo(mezzo: IMezzo)** gestisce vari scenari possibili.
-I primi due rappresentano la continuità: un utente può prenotare un mezzo e richiamando lo stesso metodo con lo stesso mezzo questo verrà depositato e ritornerà disponibile. Se l'utente non ha ancora assegnato alcun mezzo verrà controllato lo status del mezzo, se é disponibile o meno, e lo status del metodo di pagamento, se é attivo o meno, fornendo alternative come indicazioni testuali nei log nelle eventualità di mezzo non disponibile, prenotazione non disponibile a causa del metodo di pagamento non attivo o un errore in caso di input in entrata non corretto:
+I primi due rappresentano la continuità: un utente può prenotare un mezzo e richiamando lo stesso metodo con lo stesso mezzo indicato, questo verrà depositato e ritornerà disponibile. Se l'utente non ha ancora assegnato alcun mezzo verrà controllato lo status del mezzo, se é disponibile o meno, e lo status del metodo di pagamento, se é attivo o meno, fornendo alternative come indicazioni testuali nei log nelle eventualità di mezzo non disponibile, prenotazione non disponibile a causa del metodo di pagamento non attivo o un errore in caso di input in entrata non corretto:
 
 ```typescript
   prenotaMezzo(mezzo: IMezzo): void {
@@ -345,10 +351,10 @@ Nella class Citta vi sarà una modifica fin dal constructor:
 
 <br>
 
-I mezzi della flotta di una determinata città potranno essere aggiunti al momento dell'instanziazione della class. Il parametro flotta è un rest parameter perciò un qualsisi numero di mezzi verrà gestito. Questi verranno modificati singolarmente per avere un'indicazione della flotta di appartenza.
+I mezzi della flotta di una determinata città potranno essere aggiunti al momento della creazione dell'istanza. Il parametro flotta è un rest parameter perciò un qualsiasi numero di mezzi verrà gestito. Questi verranno modificati singolarmente per avere un'indicazione della flotta di appartenza.
 
-Il metodo aggiungiMezzo(mezzo: IMezzo) é creato per evitare duplicati dei mezzi nella stessa flotta o in più flotte delle città.
-Questo controllerà prima se il mezzo é già presente nella flotta, in modo da evitare duplicati nella stessa lista. Poi, nel caso il mezzo provenga da un'altra città, leverà dalla lista di tale città il mezzo e solo in seguito lo aggiungerà alla flotta della nuova.
+Il metodo aggiungiMezzo(mezzo: IMezzo) é stato leggermente ampliato rispetto alla richiesta per evitare duplicati dei mezzi nella stessa flotta o in più flotte delle città.
+Questo controllerà prima se il mezzo é già presente nella flotta, poi, nel caso il mezzo provenga da un'altra città, toglierà dalla lista di tale città il mezzo e solo in seguito lo aggiungerà alla flotta della nuova.
 
 ```typescript
   aggiungiMezzo(mezzo: IMezzo): void {

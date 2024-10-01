@@ -169,8 +169,8 @@ console.log("Amsterdam --> flotta di ".concat(mooveAmsterdam.flotta.length, " me
 console.log("Milano --> flotta di ".concat(mooveMilan.flotta.length, " mezz").concat(mooveMilan.flotta.length === 1 ? "o" : "i"));
 console.log("Madrid --> flotta di ".concat(mooveMadrid.flotta.length, " mezz").concat(mooveMadrid.flotta.length === 1 ? "o" : "i"));
 // NOTA: capire se i vari type dei parametri vanno come ICity o City
+// dividere in moduli?
 // Controllo finale
-// aggiungere string in Fatturazione per tariffa oraria / giornaliera / mensile
 // File README.md
 // Presentazione
 // jamieAccount.prenotaMezzo();
