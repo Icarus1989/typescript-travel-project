@@ -186,13 +186,14 @@ Con l'obiettivo di mettere in pratica qualcosa in più di quanto appreso nella t
 La property stato accetterà, invece che delle value string, dei types creati appositamente: Disponibile (pronto per l'uso), InUso (mezzo assegnato ad un Utente) e NonDisponibile (nel caso il mezzo sia in riparazione o altro).
 Questi rappresenteranno gli stati nei quali potrà trovarsi un mezzo ed indicherà anche l'utente al quale il mezzo é stato assegnato come richiesto e in aggiunta la città dove il mezzo é disponibile. La property accetterà un type ICitta o "none" al momento della creazione:
 
-<code>
-  type Disponibile = {
-    status: "disponibile";
-    utente: "none";
-    citta: ICitta | "none";
-  };
-</code>
+```typescript
+type Disponibile = {
+	status: "disponibile";
+	utente: "none";
+	citta: ICitta | "none";
+};
+```
+
 <br>
 
 Questa modifica é funzionale al fatto che quando si andrà ad aggiungere un mezzo ad una nuova città tramite il metodo **aggiungiMezzo()** della class Citta occorrerà toglierlo dalla precedente per non avere duplicati e problemi successivamente, per esempio rappresentando in React.js tali liste di mezzi e ottenendo un errore per i duplicati non filtrati.
