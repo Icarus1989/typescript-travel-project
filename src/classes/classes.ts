@@ -20,7 +20,6 @@ export class Mezzo implements IMezzo {
 		this.mooveId = `moove${tipoMezzo.slice(0, 1).toUpperCase()}${mooveId}`;
 		this.stato = stato;
 	}
-	// ---
 
 	assegnaUtente(utente: IUtente): void {
 		this.stato = {

@@ -1,5 +1,3 @@
-// import { Mezzo, Utente, Citta } from "./classes/classes";
-
 import { Mezzo, Utente, Citta } from "./classes/classes.js";
 
 // Mezzi
@@ -40,7 +38,7 @@ const monopattino006 = new Mezzo("monopattino", "006", {
 	citta: "none"
 });
 
-// utenti
+// Utenti
 
 const johnAccount = new Utente("John", "Doe", "johndoe@abc.com", {
 	status: "attivo",
@@ -60,13 +58,7 @@ const jackAccount = new Utente("Jack", "Doe", "jackdoe@abc.com", {
 	credito: 0
 });
 
-// const jamieAccount = new Utente("Jamie", "Doe", "jamiedoe@abc.com", {
-// 	status: "attivo",
-// 	modalita: "ApplePay",
-// 	credito: 1000
-// });
-
-// città
+// Città
 
 const mooveAmsterdam = new Citta("Amsterdam", bike001, bike002);
 const mooveMilan = new Citta("Milano", monopattino005);
@@ -129,8 +121,6 @@ console.log(
 		mooveMadrid.flotta.length === 1 ? "o" : "i"
 	}`
 );
-
-// dividere in moduli
 
 // [x] File README.md
 

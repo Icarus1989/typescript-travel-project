@@ -107,10 +107,10 @@ tsc app.ts --watch
 
 In alternativa si può utilizzare il progetto senza necessità di clonarlo tramite pen del sito codepen.io:
 
-[TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE?editors=1111)
+[TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE)
 
 > [!IMPORTANT]
-> Utilizzare TypeScript nelle impostazioni di codepen.io per compilare correttamente il progetto.
+> Utilizzare TypeScript nelle impostazioni di codepen.io per compilare correttamente il progetto. Questo non sarà diviso in moduli per l'impossibilità di caricare asset con il piano gratuito di codepen.
 
 ### Description
 
@@ -378,6 +378,14 @@ Questo controllerà prima se il mezzo é già presente nella flotta, poi, nel ca
 <br>
 
 <hr>
+
+- **modules**
+
+Per capire le differenze negli import e negli export dei moduli in TypeScript, ho optato per dividere in moduli il progetto, tra types, interfaces, classes e principale app, anche se non effettivamente indispensabile in un progetto di queste dimensioni.
+
+<br>
+
+<hr>
 <hr>
 
 ## Resources
@@ -392,7 +400,7 @@ Questo controllerà prima se il mezzo é già presente nella flotta, poi, nel ca
 
 Il progetto può essere provato senza alcuna installazione al link:
 
-[TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE?editors=1111)
+[TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE)
 
 <br>
 <p><a href="#begin">&#9650; Back to summary</a></p>
