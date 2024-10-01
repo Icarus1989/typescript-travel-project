@@ -93,6 +93,7 @@ var Citta = /** @class */ (function () {
     };
     return Citta;
 }());
+// Mezzi
 var bike001 = new Mezzo("bici", "001", {
     status: "disponibile",
     utente: "none",
@@ -123,6 +124,7 @@ var monopattino006 = new Mezzo("monopattino", "006", {
     utente: "none",
     citta: "none"
 });
+// utenti
 var johnAccount = new Utente("John", "Doe", "johndoe@abc.com", {
     status: "attivo",
     modalita: "ApplePay",
@@ -143,34 +145,36 @@ var jamieAccount = new Utente("Jamie", "Doe", "jamiedoe@abc.com", {
     modalita: "ApplePay",
     credito: 1000
 });
+// città
 var mooveAmsterdam = new Citta("Amsterdam", bike001, bike002);
 var mooveMilan = new Citta("Milano", monopattino005);
 var mooveMadrid = new Citta("Madrid");
+mooveMadrid.aggiungiMezzo(scooter003);
+mooveMadrid.aggiungiMezzo(scooter004);
 console.log("Amsterdam --> flotta di ".concat(mooveAmsterdam.flotta.length, " mezz").concat(mooveAmsterdam.flotta.length === 1 ? "o" : "i"));
 console.log("Milano --> flotta di ".concat(mooveMilan.flotta.length, " mezz").concat(mooveMilan.flotta.length === 1 ? "o" : "i"));
 console.log("Madrid --> flotta di ".concat(mooveMadrid.flotta.length, " mezz").concat(mooveMadrid.flotta.length === 1 ? "o" : "i"));
-mooveMadrid.aggiungiMezzo(scooter003);
-mooveMadrid.aggiungiMezzo(scooter004);
+// prenotazione mezzo --->
 johnAccount.prenotaMezzo(bike001);
+// deposito mezzo --->
 johnAccount.prenotaMezzo(bike001);
 janeAccount.prenotaMezzo(scooter003);
+// metodo di pagamento non idoneo --->
 jackAccount.prenotaMezzo(scooter004);
-jamieAccount.prenotaMezzo(monopattino005);
 janeAccount.prenotaMezzo(scooter003);
+// monopattino aggiunto a Milano --->
 mooveMilan.aggiungiMezzo(monopattino006);
-jamieAccount.prenotaMezzo(monopattino005);
+// monopattino tolto da Milano e aggiunto ad Amsterdam --->
+mooveAmsterdam.aggiungiMezzo(monopattino006);
+// monopattino aggiunto ad Amsterdam --->
 mooveAmsterdam.aggiungiMezzo(monopattino005);
+// monopattino NON aggiunto nuovamente ad Amsterdam --->
 mooveAmsterdam.aggiungiMezzo(monopattino005);
 mooveMadrid.aggiungiMezzo(scooter003);
-mooveMadrid.aggiungiMezzo(scooter004);
-mooveAmsterdam.aggiungiMezzo(monopattino006);
-mooveMilan.aggiungiMezzo(scooter004);
 console.log("Amsterdam --> flotta di ".concat(mooveAmsterdam.flotta.length, " mezz").concat(mooveAmsterdam.flotta.length === 1 ? "o" : "i"));
 console.log("Milano --> flotta di ".concat(mooveMilan.flotta.length, " mezz").concat(mooveMilan.flotta.length === 1 ? "o" : "i"));
 console.log("Madrid --> flotta di ".concat(mooveMadrid.flotta.length, " mezz").concat(mooveMadrid.flotta.length === 1 ? "o" : "i"));
-// NOTA: capire se i vari type dei parametri vanno come ICity o City
 // dividere in moduli?
-// Controllo finale
-// File README.md
-// Presentazione
-// jamieAccount.prenotaMezzo();
+// [x] File README.md
+// [ ] Presentazione
+// [ ] Controllo finale
