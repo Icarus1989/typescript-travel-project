@@ -38,6 +38,8 @@
       <a href="#about-the-project">About The Project</a>
       <ul>
         <li><a href="#build-with">Built With</a></li>
+        <li><a href="#install">Built With</a></li>
+        <li><a href="#codepen">Built With</a></li>
         <li><a href="#description">Description</a>
           <ul>
           <li><a href="#moove-project">Moove Project</a></li>
@@ -70,6 +72,47 @@ Progetto sviluppato utilizzando le conoscenze in questi linguaggi:
 
 <hr>
 <hr>
+
+### Install
+
+1. Clonare la repository:
+
+```sh
+git clone https://github.com/Icarus1989/typescript-travel-project
+```
+
+2. Directory del progetto:
+
+```sh
+cd typescript-travel-project
+```
+
+3. Installazione dependencies:
+
+```sh
+npm install
+```
+
+4. Compilare il codice:
+
+```sh
+npx tsc
+```
+
+5. Oppure installare Live Server in Visual Studio Code ed utilizzare la funzione watch:
+
+```sh
+tsc app.ts --watch
+```
+
+### Codepen
+
+In alternativa si può utilizzare il progetto senza necessità di clonarlo tramite pen del sito codeper.io:
+
+[TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE?editors=1111)
+
+> [!IMPORTANT]
+> Utilizzare TypeScript nelle impostazioni di codepen.io per compilare corretttamente il progetto.
 
 ### Description
 
@@ -205,13 +248,14 @@ Una reference alla città precedente rende possibile e rapido questo processo.
 
 La property **metodoDiPagamento** accetterà value di type **Fatturazione**. Questo type indicherà se l'account é attivo o non attivo, quale metodo di pagamento sia stato selezionato al momento della crezione dell'istanza ed il credito disponibile.
 
-<code>
-  type Fatturazione = {
-    status: "attivo" | "nonAttivo";
-    modalita: "Carta di Credito" | "ApplePay" | "Paypal" | "SatisPay";
-    credito: number;
-  };
-</code>
+```typescript
+type Fatturazione = {
+	status: "attivo" | "nonAttivo";
+	modalita: "Carta di Credito" | "ApplePay" | "Paypal" | "SatisPay";
+	credito: number;
+};
+```
+
 <br>
 
 Questo chiaramente condizionerà la capacità o meno di prenotazione di un mezzo da parte dell'utente.
@@ -223,7 +267,7 @@ Questo chiaramente condizionerà la capacità o meno di prenotazione di un mezzo
 Il metodo **prenotaMezzo(mezzo: IMezzo)** gestisce vari scenari possibili.
 I primi due rappresentano la continuità: un utente può prenotare un mezzo e richiamando lo stesso metodo con lo stesso mezzo questo verrà depositato e ritornerà disponibile. Se l'utente non ha ancora assegnato alcun mezzo verrà controllato lo status del mezzo, se é disponibile o meno, e lo status del metodo di pagamento, se é attivo o meno, fornendo alternative come indicazioni testuali nei log nelle eventualità di mezzo non disponibile, prenotazione non disponibile a causa del metodo di pagamento non attivo o un errore in caso di input in entrata non corretto:
 
-<code>
+```typescript
   prenotaMezzo(mezzo: IMezzo): void {
 		if (mezzo !== undefined && mezzo.stato.utente !== this) {
 			if (
@@ -258,7 +302,8 @@ I primi due rappresentano la continuità: un utente può prenotare un mezzo e ri
 			throw new Error("Input del mezzo non corretto");
 		}
 	}
-</code>
+```
+
 <br>
 
 <hr>
@@ -283,7 +328,7 @@ I mezzi della flotta di una determinata città potranno essere aggiunti al momen
 Il metodo aggiungiMezzo(mezzo: IMezzo) é creato per evitare duplicati dei mezzi nella stessa flotta o in più flotte delle città.
 Questo controllerà prima se il mezzo é già presente nella flotta, in modo da evitare duplicati nella stessa lista. Poi, nel caso il mezzo provenga da un'altra città, leverà dalla lista di tale città il mezzo e solo in seguito lo aggiungerà alla flotta della nuova.
 
-<code>
+```typescript
   aggiungiMezzo(mezzo: IMezzo): void {
 		if (
 			this.flotta.filter((elem) => elem.mooveId === mezzo.mooveId).length > 0
@@ -300,7 +345,8 @@ Questo controllerà prima se il mezzo é già presente nella flotta, in modo da 
 		mezzo.stato.citta = this;
 		this.flotta.push(mezzo);
 	}
-</code>
+```
+
 <br>
 
 <hr>
@@ -316,7 +362,7 @@ Questo controllerà prima se il mezzo é già presente nella flotta, in modo da 
 
 ## Demo
 
-Il progetto può essere provato senza alcuna installazione al link codepen:
+Il progetto può essere provato senza alcuna installazione al link:
 
 [TypeScript Start2Impact Project](https://codepen.io/Icarus1989/pen/rNXOBQE?editors=1111)
 

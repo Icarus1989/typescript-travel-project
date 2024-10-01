@@ -290,8 +290,8 @@ console.log(
 );
 
 // NOTA: capire se i vari type dei parametri vanno come ICity o City
+// dividere in moduli?
 // Controllo finale
-// aggiungere string in Fatturazione per tariffa oraria / giornaliera / mensile
 // File README.md
 // Presentazione
 
