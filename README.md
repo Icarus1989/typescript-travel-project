@@ -18,6 +18,8 @@
 <hr>
 <hr>
 
+<div id="begin"></div>
+
 <p align="center">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Icarus1989/typescript-travel-project?style=flat-square">
 <img alt="GitHub commit activity" src="https://img.shields.io/github/commit-activity/m/Icarus1989/typescript-travel-project"> 
@@ -35,7 +37,7 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
-        <li><a href="#built-with">Built With</a></li>
+        <li><a href="#build-with">Built With</a></li>
         <li><a href="#description">Description</a>
           <ul>
           <li><a href="#moove-project">Moove Project</a></li>
@@ -46,7 +48,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#trace-summary">Trace Summary</a>
     <li><a href="#additional-features">Additional Features</a></li>
-    <li><a href="#resources">Demo</a></li>
+    <li><a href="#resources">Resources</a></li>
     <li><a href="#demo">Demo</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contacts">Contacts</a></li>
@@ -54,14 +56,17 @@
   </ol>
 </details>
 
+<hr>
+<hr>
+
 ## About the project
 
 ### Build with:
 
 Progetto sviluppato utilizzando le conoscenze in questi linguaggi:
 
-- [TypeScript]()
-- [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript?retiredLocale=it)
+- _TypeScript_
+- _JavaScript_
 
 <hr>
 <hr>
@@ -72,9 +77,15 @@ Progetto sviluppato utilizzando le conoscenze in questi linguaggi:
 
 Questo progetto é stato creato per consolidare le conoscenze acquisite durante il Corso **TypeScript** di Start2Impact, parte finale del mio percorso come Front-End Developer. Questo é molto meno articolato e sviluppato dei precedenti, ma dimostra comunque egregiamente l'utilità di TypeScript, rendendo necessaria la comprensione della tipizzazione delle entità presenti per poterlo realizzare.
 
+<hr>
+<hr>
+
 ## Usage
 
 Di utilizzo molto basilare, basta creare delle istanze delle varie classi e utilizzarne i metodi per vedere i log nella console.
+
+<hr>
+<hr>
 
 ## Trace Summary
 
