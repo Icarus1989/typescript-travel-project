@@ -163,27 +163,27 @@ Il progetto richiede solo la scrittura del codice in TypeScript.
 
 L'azienda che vedi è ipotetica e per realizzare il progetto potrai immaginare di essere un membro del suo team.
 
-**Nome**
+**_Nome_**
 
 Moove
 
-**Da dove nasce l'idea**
+**_Da dove nasce l'idea_**
 
 La fondatrice nasce in una grande città dove per spostarsi senza macchina si alternano diversi mezzi differenti: tram, metro, bus. Ha sempre sognato di poter far materializzare la sua bici in giro per la città nei tratti a piedi o quando non voleva aspettare il tram. Con questa idea, ha creato Moove.
 
-**Vision**
+**_Vision_**
 
 Integrare nella vita quotidiana una mobilità sostenibile, condivisa e alla portata di tutti.
 
-**Mission**
+**_Mission_**
 
 Fornire soluzioni di micromobilità che siano flessibili, convenienti e rispettose dell'ambiente.
 
-**Chi siamo**
+**_Chi siamo_**
 
 Moove è un’azienda leader nella micro mobilità condivisa. I loro mezzi sono disponibili in 20 città europee. I mezzi messi a disposizione sono bici, scooter e monopattini, tutti elettrici.
 
-**Come funziona?**
+**_Come funziona?_**
 
 I mezzi sono liberamente parcheggiati in città e sono a disposizione di cittadini e turisti. Per utilizzare un mezzo è necessario scaricare l’app, attivare la geolocalizzazione e prenotare il mezzo desiderato più vicino. Si può scegliere tra tariffa oraria, giornaliera o abbonamento mensile.
 
@@ -191,16 +191,16 @@ I mezzi sono liberamente parcheggiati in città e sono a disposizione di cittadi
 
 Definisci un'interfaccia IMezzo per rappresentare i mezzi di trasporto (bici, scooter, monopattini elettrici) messi a disposizione da Moove.
 
-Segui queste indicazioni:
+**_Segui queste indicazioni_**:
 
-- Proprietà: tipo (bici, scooter, monopattino), ID univoco, stato (disponibile, in uso).
-- Metodo: “assegnaUtente(utente: IUtente): void” per assegnare un mezzo a un utente specifico.
+- **Proprietà**: tipo (bici, scooter, monopattino), ID univoco, stato (disponibile, in uso).
+- **Metodo**: “assegnaUtente(utente: IUtente): void” per assegnare un mezzo a un utente specifico.
 
 <hr>
 
 Definisci un'interfaccia IUtente per rappresentare gli utenti del servizio.
 
-Segui queste indicazioni:
+**_Segui queste indicazioni_**:
 
 - Proprietà: nome, cognome, email, e metodo di pagamento preferito.
 - Metodo: “prenotaMezzo(mezzo: IMezzo): void” per prenotare un mezzo.
@@ -209,7 +209,7 @@ Segui queste indicazioni:
 
 Definisci un’interfaccia ICitta per rappresentare le città in cui Moove opera.
 
-Segui queste indicazioni:
+**_Segui queste indicazioni_**:
 
 - Proprietà: nome della città, elenco dei mezzi disponibili (IMezzo[]).
 - Metodo: “aggiungiMezzo(mezzo: IMezzo): void” per aggiungere un mezzo all'elenco dei mezzi disponibili nella città.
@@ -218,7 +218,7 @@ Segui queste indicazioni:
 
 Implementa le classi Mezzo, Utente e Citta, che rispettivamente implementano le interfacce IMezzo, IUtente, e ICitta.
 
-Segui queste indicazioni:
+**_Segui queste indicazioni_**:
 
 Classe Mezzo: gestisce le informazioni di ciascun mezzo e l'assegnazione agli utenti.
 Classe Utente: gestisce le informazioni degli utenti e la loro capacità di prenotare mezzi.
@@ -231,7 +231,7 @@ Nella classe Citta, il metodo “aggiungiMezzo” permetterà di aggiungere nuov
 
 <hr>
 
-Segui questi passaggi:
+**_Segui questi passaggi_**:
 
 - Istanzia alcuni oggetti Mezzo per rappresentare bici, scooter e monopattini elettrici.
 - Istanzia oggetti Utente per rappresentare gli utenti del servizio.
