@@ -250,6 +250,8 @@ Come negli altri progetti di questo corso, ho voluto aggiungere qualche estensio
 La proprietà **stato** accetterà, invece che delle value string, dei types creati appositamente: **Disponibile** (pronto per l'uso), **InUso** (mezzo assegnato ad un Utente) e **NonDisponibile** (nel caso il mezzo sia in riparazione o altro).
 Questi rappresenteranno gli stati nei quali potrà trovarsi un mezzo ed indicherà anche l'utente al quale il mezzo é stato assegnato come richiesto e in aggiunta la città dove il mezzo é disponibile. La proprietà aggiunta utente, in base al type utilizzato, potrà accetterà il type IUtente o "none", mentre la proprietà aggiunta **citta** accetterà un type ICitta o "none" al momento della creazione:
 
+<br>
+
 ```typescript
 type Disponibile = {
 	status: "disponibile";
@@ -271,9 +273,11 @@ Una reference alla città precedente rende possibile e rapido questo processo.
 
 <hr>
 
-- **interface IUtente**
+- **_interface_ IUtente**
 
 La property **metodoDiPagamento** accetterà value di type **Fatturazione**. Questo type indicherà se l'account é attivo o non attivo, quale metodo di pagamento sia stato selezionato al momento della crezione dell'istanza ed una semplificazione per il credito disponibile.
+
+<br>
 
 ```typescript
 type Fatturazione = {
@@ -289,10 +293,12 @@ Questo chiaramente condizionerà la capacità o meno di prenotare un mezzo da pa
 
 <hr>
 
-- **class Utente**
+- **_class_ Utente**
 
 Il metodo **prenotaMezzo(mezzo: IMezzo)** gestisce vari scenari possibili.
 I primi due rappresentano la continuità: un utente può prenotare un mezzo e richiamando lo stesso metodo con lo stesso mezzo indicato, questo verrà depositato e ritornerà disponibile. Se l'utente non ha ancora assegnato alcun mezzo verrà controllato lo status del mezzo, se é disponibile o meno, e lo status del metodo di pagamento, se é attivo o meno, fornendo alternative come indicazioni testuali nei log nelle eventualità di mezzo non disponibile, prenotazione non disponibile a causa del metodo di pagamento non attivo o un errore in caso di input in entrata non corretto:
+
+<br>
 
 ```typescript
   prenotaMezzo(mezzo: IMezzo): void {
@@ -335,7 +341,7 @@ I primi due rappresentano la continuità: un utente può prenotare un mezzo e ri
 
 <hr>
 
-- **class Città**
+- **_class_ Città**
 
 Nella class Citta vi sarà una modifica fin dal constructor:
 
@@ -355,6 +361,8 @@ I mezzi della flotta di una determinata città potranno essere aggiunti al momen
 
 Il metodo aggiungiMezzo(mezzo: IMezzo) é stato leggermente ampliato rispetto alla richiesta per evitare duplicati dei mezzi nella stessa flotta o in più flotte delle città.
 Questo controllerà prima se il mezzo é già presente nella flotta, poi, nel caso il mezzo provenga da un'altra città, toglierà dalla lista di tale città il mezzo e solo in seguito lo aggiungerà alla flotta della nuova.
+
+<br>
 
 ```typescript
   aggiungiMezzo(mezzo: IMezzo): void {
@@ -379,7 +387,7 @@ Questo controllerà prima se il mezzo é già presente nella flotta, poi, nel ca
 
 <hr>
 
-- **modules**
+- **_modules_**
 
 Per capire le differenze negli import e negli export dei moduli in TypeScript, ho optato per dividere in moduli il progetto, tra types, interfaces, classes e principale app, anche se non effettivamente indispensabile in un progetto di queste dimensioni.
 
