@@ -100,8 +100,10 @@ npx tsc
 5. Oppure installare Live Server in Visual Studio Code ed utilizzare la funzione watch:
 
 ```sh
-tsc app.ts --watch
+tsc --watch
 ```
+
+<br>
 
 ### Codepen
 
@@ -111,6 +113,8 @@ In alternativa si può utilizzare il progetto senza necessità di clonarlo trami
 
 > [!IMPORTANT]
 > Utilizzare TypeScript nelle impostazioni di codepen.io per compilare correttamente il progetto. Questo non sarà diviso in moduli per l'impossibilità di caricare asset con il piano gratuito di codepen.
+
+<br>
 
 ### Description
 
@@ -144,6 +148,8 @@ const johnAccount = new Utente("John", "Doe", "johndoe@abc.com", {
 
 const mooveAmsterdam = new Citta("Amsterdam", bike001, bike002);
 ```
+
+<br>
 
 Si potranno associare i mezzi alle città al momento della creazione dell'istanza della città oppure tramite il metodo aggiungiMezzo(mezzo) in seguito.
 Si potranno prenotare dei mezzi tramite il metodo prenotaMezzo(mezzo) di qualsiasi istanza Utente. Se, una volta prenotato il mezzo, si richiamerà lo stesso metodo con lo stesso parametro, il mezzo verrà depositato e tornerà disponibile.
@@ -243,7 +249,7 @@ Nella classe Citta, il metodo “aggiungiMezzo” permetterà di aggiungere nuov
 
 ## Additional Features
 
-Come negli altri progetti di questo corso, ho voluto aggiungere qualche estensione alle funzionalità richieste per il progetto, comunque contestualizzate correttamente e limitate:
+Come in altri progetti di questo Master, ho voluto aggiungere qualche estensione alle funzionalità richieste per il progetto, comunque contestualizzate correttamente e limitate:
 
 - **interface IMezzo**
 

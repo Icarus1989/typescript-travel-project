@@ -92,8 +92,6 @@ janeAccount.prenotaMezzo(scooter003);
 // metodo di pagamento non idoneo --->
 jackAccount.prenotaMezzo(scooter004);
 
-janeAccount.prenotaMezzo(scooter003);
-
 // monopattino aggiunto a Milano --->
 mooveMilan.aggiungiMezzo(monopattino006);
 // monopattino tolto da Milano e aggiunto ad Amsterdam --->
@@ -103,8 +101,6 @@ mooveAmsterdam.aggiungiMezzo(monopattino006);
 mooveAmsterdam.aggiungiMezzo(monopattino005);
 // monopattino NON aggiunto nuovamente ad Amsterdam --->
 mooveAmsterdam.aggiungiMezzo(monopattino005);
-
-mooveMadrid.aggiungiMezzo(scooter003);
 
 console.log(
 	`Amsterdam --> flotta di ${mooveAmsterdam.flotta.length} mezz${
@@ -121,9 +117,3 @@ console.log(
 		mooveMadrid.flotta.length === 1 ? "o" : "i"
 	}`
 );
-
-// [x] File README.md
-
-// [ ] Presentazione
-
-// [ ] Controllo finale
